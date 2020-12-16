@@ -19,9 +19,9 @@ bastion_IP = 130.193.49.245
 someinternalhost_IP = 10.130.0.22
 
 ## HW 4
-testapp_IP = 178.154.225.221
+testapp_IP=178.154.225.221
 
-testapp_port = 9292
+testapp_port=9292
 
 Дополнительно задание:
 ```
