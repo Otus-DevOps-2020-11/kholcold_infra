@@ -1,0 +1,19 @@
+#cloud-config
+disable_root: true
+timezone: Europe/Moscow
+repo_update: true
+repo_upgrade: true
+apt:
+  preserve_sources_list: true
+
+users:
+    - name: yc-user
+      sudo: ALL=(ALL) NOPASSWD:ALL
+      shell: /bin/bash
+      ssh-authorized-keys:
+        - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC/+urpvw/Ff1zl5QRe/g1LrsuHJUC6ae8LKDnA03G+gKVfDlkMUoy/mYnnNRCiZZ5lsCzcTIQ87wnh+TQMjO73pyEX5gYVeRZRVGkHmYzQptuFkEZgGxZM15FAq1/We9yTtlq+YYfa+/Aat3nADhpX0D7RmF1F86r4RrdkVAzUjDMuIoHVhQL6BpIXDiG1tgA0KgKoG2gl8nQSTQQUz94ubU12AP1xQ8aCWRUZdyTuWe85JkNeZ4Kvt7IjmEaP4fgedv3SC5yMczA+zVG0Ph5UrR9K2agf/6n44frsI2KaQuQsGN8Z6kfrOohjW4wNqWoXKsEaiYBm0R8CkCCZcY/xKGsV/5GN4q2rhka0qIZUbeauyqufwjp0mJnQRAWBgobCegAPigPxLVuSymstmhzzZ48wkL9iGqckiv34cXkra5VT/ikb08BWkolVNL8ManAeQhhvAHphouA3hlW5IDEIn2W85rK6KLjss44kb285fvtGygKLFf8dUWt3qrW2pOs="
+
+runcmd:
+  - curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/kholcold_infra/cloud-testapp/install_ruby.sh | bash
+  - curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/kholcold_infra/cloud-testapp/install_mongodb.sh | bash
+  - curl https://raw.githubusercontent.com/Otus-DevOps-2020-11/kholcold_infra/cloud-testapp/deploy.sh | bash
