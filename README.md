@@ -17,3 +17,21 @@ Host someinternalhos
 
 bastion_IP = 130.193.49.245
 someinternalhost_IP = 10.130.0.22
+
+## HW 4
+testapp_IP=178.154.225.221
+
+testapp_port=9292
+
+Дополнительно задание:
+```
+yc compute instance create \
+  --name reddit-app \
+  --hostname reddit-app \
+  --memory=4 \
+  --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB \
+  --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4 \
+  --metadata serial-port-enable=1 \
+  --zone ru-central1-a \
+  --metadata-from-file user-data=./metadata.yaml
+```
