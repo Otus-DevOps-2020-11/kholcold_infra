@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install -y apt-transport-https ca-certificates
+
 cd ~
 
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
