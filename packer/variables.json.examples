@@ -1,0 +1,7 @@
+{
+    "folder_id": "aaaabbbbccccdddd1111",
+    "service_account_key_file": "/home/user/key/key.json",
+    "source_image_family": "ubuntu-1604-lts",
+    "subnet_id": "1111ddddccccbbbbaaaa",
+    "use_ipv4_nat": "true"
+}

@@ -35,3 +35,25 @@ yc compute instance create \
   --zone ru-central1-a \
   --metadata-from-file user-data=./metadata.yaml
 ```
+
+## HW 5
+1. packer:
+   - установка
+   - создание сервисного аккаунта + key файла
+
+2. Был создан файл-шаблон для packer [ubuntu16.json](packer/ubuntu16.json)
+   - добавил параметры билдера и профиженеров
+   - добавил скрипты
+   - проверил шаблон на ошибки через ```$ packer validate ./ubuntu16.json```
+   - запустил процесс сборки ```$ packer build ./ubuntu16.json```
+   - проверил запуск ВМ с образа
+
+3. Параметризирование шаблона
+   - использовал файл variables.json, который был добавлен в .gitignore. Пример файла + другие опции [variables.json.examples](packer/variables.json.examples)
+
+4. Построение bake-образа
+   - создал шаблон [immutable.json](packer/immutable.json)
+   - дополнительный файл для деплоя приложения [deploy.sh](packer/files/deploy.sh)
+
+5. Автоматизация создания ВМ
+   - создан скрипт [create-reddit-vm.sh](config-scripts/create-reddit-vm.sh). Который создает автоматически ВМ на базе нашего образа ```reddit-full```
