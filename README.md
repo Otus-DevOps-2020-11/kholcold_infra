@@ -49,7 +49,7 @@ yc compute instance create \
    - проверил запуск ВМ с образа
 
 3. Параметризирование шаблона
-   - использовал файл variables.json, который был добавлен в .gitignore. Пример файла + другие опции [variables.json.examples](packer/variables.json.examples)
+   - использовал файл variables.json, который был добавлен в .gitignore. Пример файла + другие опции [variables.json.example](packer/variables.json.example)
 
 4. Построение bake-образа
    - создал шаблон [immutable.json](packer/immutable.json)
