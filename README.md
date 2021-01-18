@@ -59,3 +59,5 @@ yc compute instance create \
    - создан скрипт [create-reddit-vm.sh](config-scripts/create-reddit-vm.sh). Который создает автоматически ВМ на базе нашего образа ```reddit-full```
 ## HW 6
 Добавленно основное задание + самостоятельное
+## HW 7 - terraform-2
+Добавленно основное задание + самостоятельное
