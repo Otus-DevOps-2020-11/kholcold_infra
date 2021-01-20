@@ -3,5 +3,6 @@
     "service_account_key_file": "key.json",
     "source_image_family": "ubuntu-1604-lts",
     "subnet_id": "1111ddddccccbbbbaaaa",
-    "use_ipv4_nat": "true"
+    "use_ipv4_nat": "true",
+    "zone": "ru-central1-a"
 }
