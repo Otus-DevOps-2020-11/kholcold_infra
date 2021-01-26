@@ -68,3 +68,27 @@ yc compute instance create \
 
 Ответ:
    Так как был клонирован репозиторий и после удаления репозитория, при выполнения команды ```ansible-playbook clone.yml``` получим ```changed=1```.
+
+## HW 9 - ansible-2
+### Самостоятельяное задание: Провижинг в Packer
+Создал плейбуки [packer_app.yml](ansible/packer_app.yml)(устанавливает Ruby и Bundler) и [packer_db.yml](ansible/packer_db.yml)( добавляет репозиторий MongoDB,
+устанавливает ее и включает сервис), которые реализовывают функционал [bash](packer/scripts) скриптов созданные нами ранее.
+
+Заменил секцию provisioners в [app.json](packer/app.json)
+```json
+"provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "../ansible/packer_app.yml"
+        }
+    ]
+```
+Заменил секцию provisioners в [db.json](packer/db.json)
+```json
+"provisioners": [
+        {
+            "type": "ansible",
+            "playbook_file": "../ansible/packer_db.yml"
+        }
+    ]
+```
