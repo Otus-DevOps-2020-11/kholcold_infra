@@ -7,3 +7,4 @@ packer/variables.json
 otus-homeworks/
 run.sh
 *.retry
+jdauphant.nginx

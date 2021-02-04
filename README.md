@@ -92,3 +92,13 @@ yc compute instance create \
         }
     ]
 ```
+## HW 10 - ansible-3
+Выполнил основное задание в котором навели порядок в директории [ansible](ansible).
+
+Добавили окружение в директорию [ansible/environments](ansible/environments), разделили на prod и stage.
+
+Улучшили файл [ansible.cfg](ansible/ansible.cfg)
+
+Поработали с комьюнити ролями на примере ```jdauphant.nginx```
+
+Поработали с Ansible Vault
