@@ -3,8 +3,6 @@
   apt:
     upgrade: dist
     update_cache: yes
-  retries: 10
-  delay: 10
   tags: install
 
 - name: Install apt-transport-https and ca-certificates
