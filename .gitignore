@@ -8,3 +8,10 @@ otus-homeworks/
 run.sh
 *.retry
 jdauphant.nginx
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

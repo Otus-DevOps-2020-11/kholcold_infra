@@ -1,0 +1,14 @@
+---
+- name: Update all packages to the latest version
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: Install package ruby
+  apt:
+    name:
+      - ruby-full
+      - ruby-bundler
+      - build-essential
+    state: present
+    update_cache: yes
