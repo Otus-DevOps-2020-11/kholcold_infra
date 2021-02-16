@@ -102,3 +102,20 @@ yc compute instance create \
 Поработали с комьюнити ролями на примере ```jdauphant.nginx```
 
 Поработали с Ansible Vault
+
+## HW 11 - ansible-4
+Был создан [Vagrantfile](ansible/Vagrantfile) для тестирования ролей.
+
+Задание со * (Дополните конфигурацию Vagrant для nginx)
+```
+ansible.extra_vars = {
+        "deploy_user" => "vagrant",
+          nginx_sites: {
+            default: [
+             "listen 80",
+             "server_name \"reddit\"",
+             "location / { proxy_pass http://127.0.0.1:9292; }"
+            ]
+          }
+```
+Тестирование ролей с помощью [molecule](ansible/roles/db/molecule)
